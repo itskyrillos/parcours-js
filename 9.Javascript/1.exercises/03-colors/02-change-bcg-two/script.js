@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+
+    document.getElementById("run").addEventListener("click", () => {
+        let color = String(document.getElementById("color").value);
+        console.log(color);
+        document.body.style.backgroundColor = String(color);
+    });
 })();

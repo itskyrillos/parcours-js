@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        let colorRandom =
+            "rgb(" +
+            Math.floor(Math.random() * 256) +
+            "," +
+            Math.floor(Math.random() * 256) +
+            "," +
+            Math.floor(Math.random() * 256) +
+            ")";
+
+        console.log(colorRandom);
+
+        document.body.style.backgroundColor = colorRandom;
+    });
 })();

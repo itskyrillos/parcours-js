@@ -12,4 +12,23 @@
 (() => {
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
     // your code here
+    let date = new Date();
+    const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    };
+    console.log(date.toLocaleDateString("fr-FR", options));
+
+    let dateFR = date.toLocaleDateString("fr-FR", options);
+
+    let hour = new Date().getHours();
+    console.log(hour);
+
+    let min = new Date().getMinutes();
+    console.log(min);
+
+    document.getElementById("target").innerHTML =
+        "Nous somme le " + dateFR + " et il est " + hour + "h" + min + ".";
 })();

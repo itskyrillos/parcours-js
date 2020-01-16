@@ -12,4 +12,15 @@
 (() => {
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
     // your code here
+    let date = new Date();
+    let hour = date.getHours();
+    let min = date.getMinutes();
+    console.log(hour);
+    console.log(min);
+
+    if (hour < 17 || (hour = 17 && min < 30)) {
+        document.getElementById("target").innerHTML = String("Bonjour");
+    } else {
+        document.getElementById("target").innerHTML = String("Bonsoir");
+    }
 })();
