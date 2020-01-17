@@ -22,8 +22,11 @@
         "durian",
         "pêche",
         "raisin",
-        "cerise",
+        "cerise"
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        fruits.forEach(lesFruits => console.log(lesFruits));
+    });
 })();

@@ -29,6 +29,10 @@
     let min = new Date().getMinutes();
     console.log(min);
 
+    if (min < 10) {
+        min = "0" + min;
+    }
+
     document.getElementById("target").innerHTML =
         "Nous somme le " + dateFR + " et il est " + hour + "h" + min + ".";
 })();

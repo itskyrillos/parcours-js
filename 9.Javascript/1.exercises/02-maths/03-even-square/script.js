@@ -12,5 +12,23 @@
 (() => {
     document.getElementById("run").addEventListener("click", () => {
         // your code here
+
+        let list = [];
+        for (let i = 1; i < 22; i++) {
+            if (i % 2 == 0) {
+                console.log(i + " -> nombre pair");
+                let pair = Math.sqrt(i);
+                console.log(pair);
+
+                let calculRound = pair;
+                let result = Math.round(calculRound * 100) / 100;
+                console.log(result);
+                list.push(" " + result);
+            } else {
+                console.log(i + " -> nombre impair");
+            }
+        }
+
+        alert(list);
     });
 })();

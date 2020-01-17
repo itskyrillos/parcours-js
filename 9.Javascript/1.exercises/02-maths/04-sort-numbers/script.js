@@ -14,5 +14,27 @@
 
     document.getElementById("run").addEventListener("click", () => {
         // your code here
+        // let input = document.getElementById("numbers").value;
+        // let list = input.split(",");
+        // console.log(list);
+
+        var nums = document.getElementById("numbers").value;
+
+        var tab = nums.split(",");
+        console.log(tab);
+
+        var tabInt = [];
+
+        tab.forEach(function(num) {
+            tabInt.push(parseInt(num));
+        });
+
+        tabInt.sort(function(a, b) {
+            return a - b;
+        });
+
+        console.log(tabInt);
+
+        document.getElementById("numbers").value = tabInt;
     });
 })();
