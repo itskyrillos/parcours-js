@@ -19,8 +19,12 @@
         "Caroline",
         "Esther",
         "Simon",
-        "Lucas",
+        "Lucas"
     ]);
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        console.log(people.size);
+        console.log(people.has("Alexandre"));
+    });
 })();

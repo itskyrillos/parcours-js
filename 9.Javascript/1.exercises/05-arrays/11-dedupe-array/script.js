@@ -24,8 +24,22 @@
         "pêche",
         "cerise",
         "raisin",
-        "cerise",
+        "cerise"
     ];
+    console.log(fruits);
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        function removeDups(fruits) {
+            let unique = {};
+            fruits.forEach(function(i) {
+                if (!unique[i]) {
+                    unique[i] = true;
+                }
+            });
+            return Object.keys(unique);
+        }
+
+        console.log(removeDups(fruits));
+    });
 })();

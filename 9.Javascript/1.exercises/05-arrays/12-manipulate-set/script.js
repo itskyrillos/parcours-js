@@ -20,8 +20,23 @@
         "durian",
         "pêche",
         "raisin",
-        "cerise",
+        "cerise"
     ]);
+    console.log(fruits);
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        fruits.forEach(function(x) {
+            if (x === "pomme") {
+                fruits.delete(x);
+                fruits.add("bananne");
+            }
+            if (x === "cerise") {
+                fruits.delete(x);
+                fruits.add("kiwi");
+            }
+        });
+
+        console.log(fruits);
+    });
 })();

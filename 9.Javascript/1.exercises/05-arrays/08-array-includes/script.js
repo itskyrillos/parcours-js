@@ -22,8 +22,18 @@
         "durian",
         "pêche",
         "raisin",
-        "cerise",
+        "cerise"
     ];
 
     // your code here
+
+    document.getElementById("run").addEventListener("click", () => {
+        const pomme = fruits.find(element => element === "pomme");
+
+        if (pomme === "pomme") {
+            console.log("Oui");
+        } else {
+            console.log("Non");
+        }
+    });
 })();
