@@ -16,7 +16,11 @@
         nickname: "Leny",
         birthDate: "08-05-1985",
         city: "Liège",
-        status: "married",
+        status: "married"
     };
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        console.log(Object.keys(person));
+        console.log(Object.values(person));
+    });
 })();

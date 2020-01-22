@@ -11,4 +11,27 @@
 
 (() => {
     // your code here
+    const moi = {
+        lastname: "Guillaume",
+        firstname: "Cyrille",
+        age: "23",
+        city: "Naninne",
+        country: "Belgique"
+    };
+
+    document.getElementById("run").addEventListener("click", () => {
+        console.log(
+            "Je m'appelle " +
+                moi.firstname +
+                " " +
+                moi.lastname +
+                ", j'ai " +
+                moi.age +
+                " ans et je viens de " +
+                moi.city +
+                " en " +
+                moi.country +
+                "."
+        );
+    });
 })();
