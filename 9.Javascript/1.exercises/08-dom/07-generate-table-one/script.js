@@ -11,4 +11,12 @@
 
 (() => {
     // your code here
+    document.getElementById("target").innerHTML= addTable;
+
+    let addTable = newTable()
+
+    function newTable(){
+        for (var i=0; i<3; i++){
+            document.createElement('tr');
+    }
 })();

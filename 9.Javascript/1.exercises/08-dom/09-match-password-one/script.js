@@ -11,4 +11,28 @@
 
 (() => {
     // your code here
+
+    document.getElementById("run").addEventListener("click", () => {
+        const mdp1 = document.getElementById("pass-one").value;
+        const mdp2 = document.getElementById("pass-two").value;
+        const inputBorder = document.getElementsByTagName("input");
+
+        // console.log(inputBorder[0]);
+
+        if (mdp1 !== mdp2) {
+            console.log("No");
+            inputBorder[0].style.borderColor = "red";
+            inputBorder[1].style.borderColor = "red";
+
+            // document.getElementById("pass-one").style.borderColor = "red";
+            // document.getElementById("pass-two").style.borderColor = "red";
+        } else {
+            console.log("Yes");
+            inputBorder[0].style.borderColor = "green";
+            inputBorder[1].style.borderColor = "green";
+
+            // document.getElementById("pass-one").style.borderColor = "green";
+            // document.getElementById("pass-two").style.borderColor = "green";
+        }
+    });
 })();

@@ -11,4 +11,21 @@
 
 (() => {
     // your code here
+
+    let image = document.querySelector("img");
+    let original = image.src;
+    let newImage = image.dataset.hover;
+
+    // document.querySelector("img").getAttribute("src")
+    // document.querySelector("img").getAttribute("data-hover")
+
+    image.addEventListener("mouseover", () => {
+        image.src = newImage;
+        console.log("on");
+    });
+
+    image.addEventListener("mouseout", () => {
+        image.src = original;
+        console.log("off");
+    });
 })();

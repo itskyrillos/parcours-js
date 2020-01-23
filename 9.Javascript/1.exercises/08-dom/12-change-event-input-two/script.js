@@ -11,4 +11,15 @@
 
 (() => {
     // your code here
+    // document.getElementById("pass-one").minLenght = "10";
+    let pass = document.getElementById("pass-one").value;
+    let validity = document.getElementById("validity");
+
+    document.getElementById("pass-one").addEventListener("keyup", () => {
+        if (pass.lenght > 7) {
+            validity.innerHTML = "Ok";
+        } else {
+            validity.innerHTML = "Pas ok";
+        }
+    });
 })();

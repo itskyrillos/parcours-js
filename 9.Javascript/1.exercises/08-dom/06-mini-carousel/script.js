@@ -15,8 +15,21 @@
         "../../_shared/img/clock.svg",
         "../../_shared/img/compass.svg",
         "../../_shared/img/lemon.svg",
-        "../../_shared/img/map.svg",
+        "../../_shared/img/map.svg"
     ];
 
     // your code here
+    let img = document.querySelector("img");
+    console.log(img);
+    let i = 0;
+
+    document.getElementById("next").addEventListener("click", () => {
+        i += 1;
+        if (i == gallery.length) {
+            i = 0;
+        }
+
+        img.src = gallery[i];
+        console.log(i);
+    });
 })();

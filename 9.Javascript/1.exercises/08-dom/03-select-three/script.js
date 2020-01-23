@@ -11,4 +11,9 @@
 
 (() => {
     // your code here
+    let change = document.querySelectorAll(".target");
+
+    change.forEach(function(target) {
+        target.innerHTML = "owned";
+    });
 })();
