@@ -11,4 +11,21 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        const getHeroesAsync = async function() {
+            try {
+                const response = await fetch("http://localhost:3000/heroes");
+                if (response.ok) {
+                    const jsonData = await response.json();
+                    console.log(jsonData);
+                } else {
+                    console.error("server response : " + response.status);
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        getHeroesAsync();
+    });
 })();

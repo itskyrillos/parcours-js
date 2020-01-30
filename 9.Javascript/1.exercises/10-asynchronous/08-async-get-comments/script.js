@@ -13,5 +13,10 @@
     // your code here
     document.getElementById("run").addEventListener("click", async () => {
         const posts = await window.lib.getPosts();
+
+        posts.forEach(async article => {
+            article.comments = await window.lib.getComments(article);
+        });
+        console.log(posts);
     });
 })();
