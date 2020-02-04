@@ -1,0 +1,75 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    overflow: hidden;
+}
+
+#div-xy {
+    width: 100%;
+    height: auto;
+
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.hoverMe {
+    background-color: #8b8b8b;
+    height: 200px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    width: 90%;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+/* CUSTOM CURSOR */
+
+.cursor,
+.follow {
+    position: absolute;
+    pointer-events: none;
+    width: 0.4rem;
+    height: 0.4rem;
+    transform: translate(-50%, -50%);
+}
+
+.cursor {
+    background-color: white;
+    border-radius: 100%;
+}
+
+.follow {
+    padding: 2rem;
+    border: 0.1rem solid white;
+    transition: all 0.2s ease-out;
+    border-radius: 100%;
+}
+
+.follow.on-focus {
+    transform: translate(-0.55rem, -0.55rem);
+    border: 0.1rem solid white;
+    border-radius: 0%;
+    padding: 0.46rem;
+}
