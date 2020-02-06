@@ -40,19 +40,26 @@ let reverseWordsInArray = array => {
 let everyPossiblePair = array => {};
 
 let allElementsExceptFirstThree = array => {
-    return "Write your method here";
+    let newArray = array.slice(3);
+    return newArray;
 };
 
 let addElementToBeginning = (array, element) => {
-    return "Write your method here";
+    array.unshift(element);
+    return array;
 };
 
 let sortByLastLetter = array => {
-    return "Write your method here";
+    return array.sort(
+        (a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1)
+    );
 };
 
 let getFirstHalf = string => {
-    return "Write your method here";
+    let nbr = string.length();
+    let halfNbr = Math.ceil(nbr / 2);
+    let halfString = string.substr(0, halfNbr);
+    return halfString;
 };
 
 let makeNegative = number => {
