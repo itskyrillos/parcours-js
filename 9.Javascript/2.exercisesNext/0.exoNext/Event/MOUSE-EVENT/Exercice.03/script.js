@@ -49,3 +49,17 @@ if (cursor) {
         }
     });
 }
+
+function sayHello() {
+    if (navigator.userAgent.toLowerCase().indexOf("chrome") > -1) {
+        let args = [
+            "\n %c Made with ♥ by Cyrille Guillaume \n",
+            "color: #fff; background: #e43333; padding:5px 0;"
+        ];
+        window.console.log.apply(console, args);
+    } else if (window.console) {
+        window.console.log("Made with love ♥ Cyrille Guillaume");
+    }
+}
+
+sayHello();
